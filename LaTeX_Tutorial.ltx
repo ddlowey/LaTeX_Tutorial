@@ -161,6 +161,80 @@
 				Hello world!
 				
 				\textcolor{blue}{\textbackslash end}\textcolor{DarkGreen}{\{}document\textcolor{DarkGreen}{\}} 
-		\endgroup					
+		\endgroup		
+			
+		%=========== %
+		% LaTeX-Syntax %
+		%=========== %
+
+		\begin{flushleft} 
+
+			\textbf{3. \LaTeX-Syntax} \bigskip
+			
+			In \LaTeX{} special commands are used for typesetting a text or document. 
+			These commands are usually a combination of special characters and letters, do not allow for any spaces and are case sensitive
+				\footnote{
+					\tiny Case sensitive means that upper- and lowercase are treated as distinct. For example, \textit{command1} and \textit{Command1}  	
+					\tiny would be two different commands and not interchangeable. Case sensitivity is also a common source of error, as commands    
+					\tiny must be entered as intended (e.g. \textbackslash\textit{LaTeX\{\}}  vs. \textit{\st{\textbackslash latex\{\}}}).
+					}			
+			. Similarly to the valency of a verb in language, \LaTeX{} commands can be classified by the number of arguments they take. 
+			In general, they can be categorised into two major groups: \bigskip{}
+			
+			1.) Zero-Argument-Commands 
+			
+			2.) Non-Zero-Argument-Commands \bigskip{}
+									
+			%------------------------- %
+			% Basic Commands %
+			%------------------------- %			
+			
+			\textbf{3.1 Zero-Argument-Commands} \bigskip{}
+			
+			\foreignlanguage{english}{\enquote{Zero-Argument-Commands}} are commands that do not require any additional arguments - at least 
+			on the surface level - and that can be used intransitively (i.e. on their own). 
+			These commands generally consist of three components: 
+			1.) a backslash, 2.) a simple word or phrase indicating the function of the command and 3.) (empty) curly brackets. 
+			They can be notated as:
+		
+		\end{flushleft}
+
+			\colorbox{yellow}{\textit{\textbackslash somecommand\{\}}} \bigskip
+
+		\begingroup
+			\fontsize{9pt}{11pt}\selectfont
+
+				Ex. 1) \bigskip
+
+				\textit{\textbackslash LaTeX\{\}} \hspace{10mm} – \hspace{5mm} displays the \foreignlanguage{english}{\enquote{LaTeX}} symbol (\LaTeX)
+
+				\textit{\textbackslash noindent\{\}} \hspace{6.6mm} – \hspace{5mm} suppresses paragraph indentation
+
+				\textit{\textbackslash bigskip\{\}} \hspace{9mm} – \hspace{5mm} creates a vertical empty space
+
+		\endgroup		
+
+		\begin{flushleft}
+
+			Since basic commands like this do not take on any specified arguments, the curly brackets (for more detail see 3.2) may be left out. 
+			While this normally does not entail any loss of function, it can lead to minor behavioural differences (such as inserting or deleting a space), 
+			especially when the command is a direct part of the text: 
+
+		\end{flushleft}
+			
+		\begingroup
+			\fontsize{9pt}{11pt}\selectfont
+			
+				\textit{\textbackslash LaTeX is cool}  \hspace{10mm} vs. \hspace{10mm} \textit{\textbackslash LaTeX\{\} is cool}
+
+			\begingroup
+				\fontsize{7.5pt}{10pt}\selectfont			
+		
+					\hspace{1mm} (= \LaTeX is cool) \hspace{30mm} (= \LaTeX{} is cool)
+			
+			\endgroup
+
+		\endgroup		
+					
 
 \end{document}
