@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.18.0 (TeX Live 2024)  (format=lualatex 2024.9.22)  20 OCT 2024 12:51
+This is LuaHBTeX, Version 1.18.0 (TeX Live 2024)  (format=lualatex 2024.9.22)  20 OCT 2024 13:47
  restricted system commands enabled.
 **LaTeX_Tutorial.ltx
 (./LaTeX_Tutorial.ltx
@@ -1407,6 +1407,18 @@ LaTeX Font Info:    No file T3HelveticaNeue(0).fd. on input line 50.
 LaTeX Font Warning: Font shape `T3/HelveticaNeue(0)/m/n' undefined
 (Font)              using `T3/cmr/m/n' instead on input line 50.
 
+Package mdframed Info: mdframed inside a box 
+ mdframed uses option nobreak mdframed on input line 101.
+
+Overfull \hbox (23.67793pt too wide) detected at line 112
+[] \OML/cmm/m/it/10.95 preamble
+ []
+
+
+Overfull \hbox (1.52309pt too wide) detected at line 120
+[] \OML/cmm/m/it/10.95 body
+ []
+
 
 
 [1
@@ -1417,35 +1429,33 @@ LaTeX Font Warning: Font shape `T3/HelveticaNeue(0)/m/n' undefined
 LaTeX2e <2024-06-01> patch level 2
 L3 programming layer <2024-08-30>
  ***********
+Package rerunfilecheck Info: File `LaTeX_Tutorial.aux' has not changed.
+(rerunfilecheck)             Checksum: 8200F47247AE50FA831A20E3AA981B67;441.
 
-
-Package rerunfilecheck Warning: File `LaTeX_Tutorial.aux' has changed. Rerun.
-
-Package rerunfilecheck Info: Checksums for `LaTeX_Tutorial.aux':
-(rerunfilecheck)             Before: 3985256E7290058C681F74D7A3565A19;32
-(rerunfilecheck)             After:  8200F47247AE50FA831A20E3AA981B67;441.
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 )
 
 Here is how much of LuaTeX's memory you used:
- 33208 strings out of 475910
+ 33219 strings out of 475910
  100000,1648299 words of node,token memory allocated
- 749 words of node memory still in use:
-   7 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 2 glyph, 12 attribute, 98 glue_spec
-, 8 attribute_list, 2 write nodes
-   avail lists: 1:1,2:405,3:83,4:39,5:147,6:24,7:3580,9:210,10:19,11:312
- 55063 multiletter control sequences out of 65536+600000
- 64 fonts using 10105343 bytes
- 124i,7n,114p,10908b,417s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 766 words of node memory still in use:
+   7 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 2 glyph, 16 attribute, 99 glue_spec
+, 10 attribute_list, 2 write nodes
+   avail lists: 1:1,2:795,3:176,4:165,5:171,6:63,7:4612,8:12,9:519,10:19,11:375
+ 55074 multiletter control sequences out of 65536+600000
+ 65 fonts using 10477351 bytes
+ 124i,9n,114p,10908b,417s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </System/Library/Fonts/HelveticaNeue.ttc></System/Library/Fonts/HelveticaNeue.tt
 c></System/Library/Fonts/HelveticaNeue.ttc></usr/local/texlive/2024/texmf-dist/f
-onts/type1/public/tipa/tipa10.pfb>
-Output written on LaTeX_Tutorial.pdf (1 page, 35197 bytes).
+onts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2024/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2024/texmf-dist/fonts
+/type1/public/tipa/tipa10.pfb>
+Output written on LaTeX_Tutorial.pdf (1 page, 53127 bytes).
 
-PDF statistics: 41 PDF objects out of 1000 (max. 8388607)
- 27 compressed objects within 1 object stream
+PDF statistics: 49 PDF objects out of 1000 (max. 8388607)
+ 33 compressed objects within 1 object stream
  2 named destinations out of 1000 (max. 131072)
  16 words of extra memory for PDF output out of 10000 (max. 100000000)
 
