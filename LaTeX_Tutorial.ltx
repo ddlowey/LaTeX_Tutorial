@@ -271,6 +271,106 @@
 								
 		\endgroup
 
-								
+			%---------------------------------------------------%
+			% Spaces and line breaks (in the Code) %
+			%---------------------------------------------------%			
+
+		\begin{flushleft} 
+		
+			\textbf{3.3 Spaces and Line Breaks} \bigskip			
+
+			\LaTeX{} mainly disregards any in-code spaces or line breaks, i.e. they have no visual impact on the actual text document. 
+			For example, a sentence can be spread across several code lines without disrupting the text output.
+			In the same way, any number of spaces can be inserted between code elements without them being transferred to the text document. 
+			The only time where spacing matters is for commands, as they cannot be broken up. Compare:
+
+		\end{flushleft}
+					
+			\begin{minipage}{0.45\textwidth}
+				\begin{tcolorbox}[title=Code, colframe=blue!20, sharp corners, colback=white]
+				
+				I'm just 
+				
+				a 
+				
+				simple example trying \hspace{5mm} to make \hspace{8mm} my way
+				 
+				through \hspace{4mm} the universe.
+				
+				\end{tcolorbox} 
+			
+			\end{minipage}		
+			\begin{minipage}{0.45\textwidth}
+				\begin{tcolorbox}[title=Output, colframe=blue!20, sharp corners, colback=white]
+				
+				I'm just 
+				a
+				simple example trying     to make        my way
+				through    the universe. \bigskip{}
+				
+				\vspace{5mm}
+				
+				\end{tcolorbox} 		
+			\end{minipage}			
+
+		\begin{flushleft} 
+		
+			To include line breaks in a text, one may choose from various options such as:
+			
+			\begin{itemize}
+				\setlength\itemsep{0em}
+					\item <empty line> \hspace{5.5mm} (creates new line)
+					\item \textit{\textbackslash newline} \hspace{13.75mm} (same as <empty line>)
+					\item \textit{\textbackslash hfill \textbackslash break} \hspace{9mm} (same as <empty line>)
+					\item \textit{\textbackslash bigskip} \hspace{14.75mm} (creates vertical space, ordinarily one line)
+			\end{itemize}
+
+		\end{flushleft}				
+
+			\begin{minipage}{0.45\textwidth}
+				\begin{tcolorbox}[title=Code, colframe=blue!20, sharp corners, colback=white]
+				
+				%\begingroup
+				%\fontsize{9pt}{11pt}\selectfont
+				
+				You don't need to see \bigskip{}
+				
+				my identification. \textcolor{blue}{\textbackslash newline}
+				
+				I'm not the example you're 
+				
+				looking for. \textcolor{blue}{\textbackslash hfill \textbackslash break} 
+				
+				I can go about 
+				
+				my business. \textcolor{blue}{\textbackslash bigskip}\textcolor{DarkGreen}{\{\}} \bigskip
+				
+				Move along! 		
+
+				%\endgroup
+				
+				\end{tcolorbox} 
+			
+			\end{minipage}		
+			\begin{minipage}{0.45\textwidth}
+				\begin{tcolorbox}[title=Output, colframe=blue!20, sharp corners, colback=white]
+				
+				You don't need to see
+				
+				my identification. \newline
+				I'm not the example you're 
+				looking for. \hfill \break  
+				I can go about 
+				my business. \bigskip{}
+				
+				Move along! 		
+				
+				\vspace{8.4mm}				
+										
+				\end{tcolorbox} 	
+					
+			\end{minipage}			
+
+%	\end{flushleft}								
 
 \end{document}
