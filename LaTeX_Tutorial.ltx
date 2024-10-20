@@ -235,6 +235,42 @@
 			\endgroup
 
 		\endgroup		
-					
+
+			%---------------------------------------%
+			% Commands with Arguments %
+			%---------------------------------------%			
+
+		\begin{flushleft} 
+		
+			\textbf{3.2 Commands and Arguments}\bigskip
+
+			\foreignlanguage{english}{\enquote{Non-Zero-Argument-Commands}} are commands that typically require an argument, 
+			i.e. an object they can be applied to. 
+			For example, the \textit{\textbackslash textit\{x\}} command that is used for italicising needs an object x (usually a word or text) it can
+			refer to or else it would not execute. 
+			This type of commands follows a similar syntax to the one seen in 3.1, with the exception that 
+			a.) curly brackets cannot be empty and actively require an argument and 
+			b.) facultative arguments (arguments that modify a command but are not required for the command to work) may be 
+			passed on via square brackets. 
+			Sometimes a command may also require more than one obligatory argument, which can be marked with additional curly brackets: 
+
+		\end{flushleft}
+
+			\colorbox{yellow}{\textit{\textbackslash somecommand[optional]\{obligatory\}\texttransparent{0.2}{\{obligatory\}}}} \bigskip
+
+		\begingroup
+			\fontsize{9pt}{11pt}\selectfont
+
+				Ex. 2) \bigskip
+				
+				\textit{\textbackslash textit\{Hello world!\}} \hspace{27mm} – \hspace{5mm} puts specified text into italics
+				
+				\textit{\textbackslash documentclass[paper=a4]\{scrartcl\}} \hspace{4mm} – \hspace{5mm} sets class of document (and specifies paper size) 
+				
+				\textit{\textbackslash textcolor\{red\}\{Hello world!\}} \hspace{15mm} – \hspace{5mm} applies specified colour to object
+								
+		\endgroup
+
+								
 
 \end{document}

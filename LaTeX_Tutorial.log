@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.18.0 (TeX Live 2024)  (format=lualatex 2024.9.22)  20 OCT 2024 13:50
+This is LuaHBTeX, Version 1.18.0 (TeX Live 2024)  (format=lualatex 2024.9.22)  20 OCT 2024 13:54
  restricted system commands enabled.
 **LaTeX_Tutorial.ltx
 (./LaTeX_Tutorial.ltx
@@ -1451,8 +1451,13 @@ LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <3.75> not available
 (Font)              size <5> substituted on input line 233.
 
 
+Package transparent Warning: Rerun to get transparencies right.
 
-[2] (./LaTeX_Tutorial.aux)
+
+
+[2]
+
+[3] (./LaTeX_Tutorial.aux)
  ***********
 LaTeX2e <2024-06-01> patch level 2
 L3 programming layer <2024-08-30>
@@ -1462,8 +1467,8 @@ L3 programming layer <2024-08-30>
 Package rerunfilecheck Warning: File `LaTeX_Tutorial.aux' has changed. Rerun.
 
 Package rerunfilecheck Info: Checksums for `LaTeX_Tutorial.aux':
-(rerunfilecheck)             Before: 8200F47247AE50FA831A20E3AA981B67;441
-(rerunfilecheck)             After:  54450E998DF3FAD9182C6CA5FB350D27;441.
+(rerunfilecheck)             Before: 54450E998DF3FAD9182C6CA5FB350D27;441
+(rerunfilecheck)             After:  AFD442C270FE059555819D87C386DBBD;462.
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.25pt have occurred.
@@ -1474,12 +1479,12 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 )
 
 Here is how much of LuaTeX's memory you used:
- 33264 strings out of 475910
+ 33265 strings out of 475910
  100000,1648299 words of node,token memory allocated
  778 words of node memory still in use:
    6 hlist, 2 vlist, 2 rule, 3 glue, 4 kern, 2 glyph, 21 attribute, 99 glue_spec
 , 12 attribute_list, 2 write nodes
-   avail lists: 1:1,2:1020,3:200,4:171,5:223,6:72,7:5841,8:12,9:587,10:21,11:496
+   avail lists: 1:1,2:1019,3:200,4:171,5:223,6:72,7:5841,8:12,9:587,10:22,11:541
 
  55117 multiletter control sequences out of 65536+600000
  91 fonts using 13909551 bytes
@@ -1489,10 +1494,10 @@ c></System/Library/Fonts/HelveticaNeue.ttc></usr/local/texlive/2024/texmf-dist/f
 onts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2024/texmf-dist/fon
 ts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2024/texmf-dist/fonts
 /type1/public/tipa/tipa10.pfb>
-Output written on LaTeX_Tutorial.pdf (2 pages, 58315 bytes).
+Output written on LaTeX_Tutorial.pdf (3 pages, 60108 bytes).
 
-PDF statistics: 56 PDF objects out of 1000 (max. 8388607)
- 39 compressed objects within 1 object stream
- 4 named destinations out of 1000 (max. 131072)
+PDF statistics: 60 PDF objects out of 1000 (max. 8388607)
+ 42 compressed objects within 1 object stream
+ 5 named destinations out of 1000 (max. 131072)
  16 words of extra memory for PDF output out of 10000 (max. 100000000)
 
