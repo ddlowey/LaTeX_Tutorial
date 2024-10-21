@@ -1,3 +1,9 @@
+## LaTeX auxiliary files
+
 *.aux
 *.log
+
+## Miscellaneous 
+# R
+
 .Rapp.history
