@@ -272,13 +272,13 @@
 								
 		\endgroup
 
-			%---------------------------------------------------%
-			% Spaces and line breaks (in the Code) %
-			%---------------------------------------------------%			
+			%----------------------------------------------%
+			% Line Breaks, Spaces and Indents %
+			%----------------------------------------------%			
 
 		\begin{flushleft} 
 		
-			\textbf{3.3 Line Breaks and Spaces} \bigskip			
+			\textbf{3.3 Line Breaks, Spaces and Indents} \bigskip			
 
 			\LaTeX{} mainly disregards any in-code spaces or line breaks, i.e. they have no visual impact on the actual text document. 
 			For example, a sentence can be spread across several lines of code without disrupting the text output.
@@ -430,9 +430,85 @@
 				\vspace{3.825cm}				
 										
 				\end{tcolorbox} 	
-					
 			\end{minipage}							
 
+		\begin{flushleft} 
+			
+			Outside of environments (see XXX) the first line of a paragraph is always indented by default. 
+			To manually insert indents one may use horizontal spacing commands such as the above, while
+			the \textit{\textbackslash noindent} command removes the default indentation:
+
+		\end{flushleft} 
+
+			\begin{minipage}{0.45\textwidth}
+				\begin{tcolorbox}[title=Code, colframe=blue!20, sharp corners, colback=white]
+				
+				Strong I am with indenting, but not that strong. 
+				Twilight is upon me and soon night must fall. 
+				\textcolor{blue}{\textbackslash bigskip} \bigskip
+				
+				\textcolor{blue}{\textbackslash noindent} Soon I will rest. Yes, forever \bigskip
+				
+				\textcolor{blue}{\textbackslash hspace}\textcolor{DarkGreen}{\{}0.3cm\textcolor{DarkGreen}{\}} 	sleep. Earned it, I have.			
+								
+				\end{tcolorbox} 
+			\end{minipage}		
+			\begin{minipage}{0.45\textwidth}
+				\begin{tcolorbox}[title=Output, colframe=blue!20, sharp corners, colback=white]
+				
+					\hspace{0.3cm} Strong I am with indenting, but not that strong. 
+					Twilight is upon me and soon night must fall. \bigskip
+										
+					Soon I will rest. Yes, forever 
+					
+					\hspace{0.3cm} sleep. 
+					Earned it, I have.
+
+				\vspace{1.725cm}				
+													
+				\end{tcolorbox} 
+			\end{minipage}		
+
+		\begin{flushleft} 
+			
+			Finally, in-code indents may serve as a simple way to structure and organise the code to make it more readable and accessible.
+			
+		\end{flushleft} 
+		
+			%-------------------------------------------------%
+			% Comments and Special Characters  %
+			%-------------------------------------------------%			
+
+		\begin{flushleft} 
+		
+			\textbf{3.4 Comments and Special Characters} \bigskip			
+
+			Comments in programming are explanations or annotations in the source code that intend to make the code easier for human readers to
+			understand and that are usually ignored by the compiler or interpreter (and hence not executed). 
+			In \LaTeX{} comments are marked through the percentage sign (\textit{\%}). 
+
+		\end{flushleft} 
+
+			\begin{minipage}{0.45\textwidth}
+				\begin{tcolorbox}[title=Code, colframe=blue!20, sharp corners, colback=white]
+				
+				\textcolor{red}{\% Sets text to italics} \bigskip			
+
+				\textcolor{blue}{\textbackslash textit}\textcolor{DarkGreen}{\{}Do or do not. There is no try.\textcolor{DarkGreen}{\}}
+												
+				\end{tcolorbox} 
+			\end{minipage}		
+			\begin{minipage}{0.45\textwidth}
+				\begin{tcolorbox}[title=Output, colframe=blue!20, sharp corners, colback=white]
+				
+					\textit{Do or do not. There is no try.}
+										
+				\vspace{1.3cm}				
+													
+				\end{tcolorbox} 
+			\end{minipage}		
+	
+		
 		%\end{flushleft} 
 
 %	\end{flushleft}								
