@@ -81,22 +81,23 @@
 			The main body is where the actual text of the document is created through a combination of normal text and markup. 
 			It always begins with the \textit{\textbackslash begin\{document\}} command and ends with the \textit{\textbackslash end\{document\}} command.
 			Every \LaTeX{} document requires all three of the above command lines irregardless of the contents. 
-			Thus, the general structure of a \LaTeX{} document can be described as: 
+			Thus, the general structure of a \LaTeX{} document is: 
 
 		\end{flushleft} 
 
 			\begin{minipage}{0.5\textwidth}
 				\begin{mdframed}[userdefinedwidth=7.5cm, backgroundcolor=black!7] 
 			
-					\textbackslash documentclass[options]\{class\} 
+					\textcolor{blue}{\textbackslash documentclass}\textcolor{DarkGreen}{[}options\textcolor{DarkGreen}{]}\textcolor{DarkGreen}
+						{\{}class\textcolor{DarkGreen}{\}} 
 			
 					\noindent \hspace{5mm} ... \bigskip{}
 			
-					\noindent \textbackslash begin\{document\} 
+					\noindent \textcolor{blue}{\textbackslash begin}\textcolor{DarkGreen}{\{}document\textcolor{DarkGreen}{\}} 
 			
 					\noindent \hspace{5mm} ... \bigskip{}
 			
-					\noindent \textbackslash end\{document\}
+					\noindent \textcolor{blue}{\textbackslash end}\textcolor{DarkGreen}{\{}document\textcolor{DarkGreen}{\}} 
 			
 				\end{mdframed}			
 			\end{minipage}
@@ -277,10 +278,10 @@
 
 		\begin{flushleft} 
 		
-			\textbf{3.3 Spaces and Line Breaks} \bigskip			
+			\textbf{3.3 Line Breaks and Spaces} \bigskip			
 
 			\LaTeX{} mainly disregards any in-code spaces or line breaks, i.e. they have no visual impact on the actual text document. 
-			For example, a sentence can be spread across several code lines without disrupting the text output.
+			For example, a sentence can be spread across several lines of code without disrupting the text output.
 			In the same way, any number of spaces can be inserted between code elements without them being transferred to the text document. 
 			The only time where spacing matters is for commands, as they cannot be broken up. Compare:
 
@@ -315,7 +316,7 @@
 
 		\begin{flushleft} 
 		
-			To include line breaks in a text, one may choose from various options such as:
+			To specifically include line breaks in a text, one may choose from various options such as:
 			
 			\begin{itemize}
 				\setlength\itemsep{0em}
@@ -330,14 +331,11 @@
 			\begin{minipage}{0.45\textwidth}
 				\begin{tcolorbox}[title=Code, colframe=blue!20, sharp corners, colback=white]
 				
-				%\begingroup
-				%\fontsize{9pt}{11pt}\selectfont
-				
 				You don't need to see \bigskip{}
 				
 				my identification. \textcolor{blue}{\textbackslash newline}
 				
-				I'm not the example you're 
+				I'm the example you're 
 				
 				looking for. \textcolor{blue}{\textbackslash hfill \textbackslash break} 
 				
@@ -346,11 +344,8 @@
 				my business. \textcolor{blue}{\textbackslash bigskip}\textcolor{DarkGreen}{\{\}} \bigskip
 				
 				Move along! 		
-
-				%\endgroup
 				
 				\end{tcolorbox} 
-			
 			\end{minipage}		
 			\begin{minipage}{0.45\textwidth}
 				\begin{tcolorbox}[title=Output, colframe=blue!20, sharp corners, colback=white]
@@ -358,7 +353,7 @@
 				You don't need to see
 				
 				my identification. \newline
-				I'm not the example you're 
+				I'm the example you're 
 				looking for. \hfill \break  
 				I can go about 
 				my business. \bigskip{}
@@ -370,6 +365,75 @@
 				\end{tcolorbox} 	
 					
 			\end{minipage}			
+			
+		\begin{flushleft} 
+		
+			For horizontal spacing some of the more widely spread commands include:
+			
+			\begin{itemize}
+				\setlength\itemsep{0em}
+					\item <empty space> \hspace{6mm} (inserts a standard horizontal space)
+					\item \textit{\textbackslash enspace} \hspace{17mm} (inserts a horizontal space of 0.5em)
+					\item \textit{\textbackslash quad} \hspace{22.75mm} (inserts a horizontal space of 1em; can be stacked)
+					\item \textit{\textbackslash qquad} \hspace{20.25mm} (inserts a horizontal space of 2em; same as 
+						\textit{\textbackslash quad \textbackslash quad})					
+					\item \textit{\textbackslash hskip<len>} \hspace{12.75mm} (inserts a space of specified length; can be negative)
+					\item \textit{\textbackslash hspace\{<len>\}} \hspace{7mm} (inserts a space of specified length + 1 standard space; 
+					
+						\hspace{3.45cm} can be negative)	
+					\item \textit{\textbackslash hfill} \hspace{25.5mm} (inserts rubber space that stretches acc. to available space)									\end{itemize}
+
+		\end{flushleft}				
+
+			\begin{minipage}{0.45\textwidth}
+				\begin{tcolorbox}[title=Code, colframe=blue!20, sharp corners, colback=white]
+								
+				Hello there! \bigskip{}
+				
+				Hello \textcolor{blue}{\textbackslash enspace} there! \bigskip{}
+				
+				Hello \textcolor{blue}{\textbackslash quad} there! \bigskip{}
+				
+				Hello \textcolor{blue}{\textbackslash qquad} there! \bigskip{}
+				
+				Hello \textcolor{blue}{\textbackslash hskip}1.2cm there! \bigskip{}
+				
+				Hello \textcolor{blue}{\textbackslash hspace}\textcolor{DarkGreen}{\{}1.2cm\textcolor{DarkGreen}{\}} there! \bigskip{}
+				
+				\textcolor{blue}{\textbackslash hspace}\textcolor{DarkGreen}{\{}0.9cm\textcolor{DarkGreen}{\}} Hello
+					\textcolor{blue}{\textbackslash hspace}\textcolor{DarkGreen}{\{}-2.1cm\textcolor{DarkGreen}{\}} there! \bigskip{}
+				
+				You \textcolor{blue}{\textbackslash hfill} are \textcolor{blue}{\textbackslash hfill} a \textcolor{blue}{\textbackslash hfill} bold
+					\textcolor{blue}{\textbackslash hfill} one.
+				
+				\end{tcolorbox} 
+			\end{minipage}		
+			\begin{minipage}{0.45\textwidth}
+				\begin{tcolorbox}[title=Output, colframe=blue!20, sharp corners, colback=white]
+				
+				Hello there!
+				
+				Hello \enspace there!
+
+				Hello \quad there!
+
+				Hello \qquad there!
+
+				Hello \hskip1.2cm there!
+
+				Hello \hspace{1.2cm} there!		
+				
+				\hspace{0.9cm} Hello \hspace{-2.1cm} there!							
+				
+				You \hfill are \hfill a \hfill bold \hfill one.
+				
+				\vspace{3.825cm}				
+										
+				\end{tcolorbox} 	
+					
+			\end{minipage}							
+
+		%\end{flushleft} 
 
 %	\end{flushleft}								
 
