@@ -12,7 +12,7 @@
 \usepackage[autostyle]{csquotes}
 \usepackage[unicode]{hyperref}
 \usepackage{bookmark}
-\usepackage[dvipsnames, svgnames]{xcolor}
+\usepackage[dvipsnames, svgnames, table]{xcolor}
 \usepackage{transparent}
 \usepackage{CJKutf8}
 \usepackage{tipa}
@@ -21,6 +21,7 @@
 \usepackage{mathtools}
 \usepackage{amsmath}
 \usepackage{tcolorbox}
+\usepackage{multirow}
 
 %\usepackage{tabto}
 
@@ -509,8 +510,41 @@
 			\end{minipage}		
 	
 		
-		%\end{flushleft} 
-
+		\begin{flushleft} 
+		
+			Special characters like \textit{\textbackslash}, \textit{\$} or \textit{\%} are often used as operators in \LaTeX{} and thus need
+			a little bit of work around to be included in-text. 
+			Some characters can be used by simply prefixing a backslash, others require a unique command: \bigskip
+			
+			\begin{tabular}{
+				| p{3cm} | p{3cm} | p{3cm} | p{3cm} |}
+				\hline
+				\rowcolor{red!30}
+					\multicolumn{4}{| c |}{\textbf{Special Characters}} \\
+				\hline
+					\rowcolor{red!10}				
+						\multicolumn{2}{| c |}{\textbf{Backslash Commands}} & \multicolumn{2}{c |}{\textbf{Unique Commands}} \\
+				\hline
+					\rowcolor{red!10}
+						\multicolumn{1}{| c |}{\textbf{Command}} & 
+						\multicolumn{1}{| c |}{\textbf{Character}} & 
+						\multicolumn{1}{| c |}{\textbf{Command}} & 
+						\multicolumn{1}{| c |}{\textbf{Character}} \\
+				%\textbf{Command} & \textbf{Character} & \textbf{Command} & \textbf{Character} \\
+				\hline
+					\textbackslash \# & \# & \textbackslash textbackslash & \textbackslash \\
+					\textbackslash \$ & \$ & \textbackslash textasciicircum & \textasciicircum \\
+					\textbackslash \% & \% & \textbackslash textasciitilde & \textasciitilde \\
+					\textbackslash \& & \& & \textbackslash infty & \infty \\
+					\textbackslash \{ & \{ & \textbackslash triangle & \triangle \\
+					\textbackslash \} & \} & \textcolor{lightgray}{...} & \textcolor{lightgray}{...} \\
+					\textbackslash \_ & \_ & & \\
+					\textcolor{lightgray}{...} & \textcolor{lightgray}{...} & & \\
+				\hline				
+			\end{tabular}	
+												
+		\end{flushleft} 
+		
 %	\end{flushleft}								
 
 \end{document}
