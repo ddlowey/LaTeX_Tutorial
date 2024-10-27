@@ -542,6 +542,42 @@
 					\textcolor{lightgray}{...} & \textcolor{lightgray}{...} & & \\
 				\hline				
 			\end{tabular}	
+
+			\textbf{3.5 Environments} \bigskip			
+
+			In \LaTeX{} environments are macros that can be used to apply specific formats to a section of the document, 
+			for example to align or centre text, to generate a table or to create lists. 
+			To initiate an environment the \textit{\textbackslash begin\{\}} command is used, 
+			which must be closed with the \textit{\textbackslash end\{\}} command. 
+			Options must be placed after the environment name to avoid any collisions.
+			Finally, environments can in themselves contain (further) environments, which, however, 
+			must be closed before the overarching environment ends: 
+
+		\end{flushleft}
+
+			\begin{minipage}{0.5\textwidth}		
+				\begin{mdframed}[userdefinedwidth=7cm, backgroundcolor=black!7] 
+			
+					\textcolor{blue}{\textbackslash begin}\textcolor{DarkGreen}{\{}environment1\textcolor{DarkGreen}{\}}\textcolor{DarkGreen}
+						{[}options\textcolor{DarkGreen}{]} 
+
+					\hspace{5mm} \textcolor{blue!30}{\textbackslash begin}\textcolor{DarkGreen!30}{\{}\textcolor{
+						black!30}{environment2}\textcolor{DarkGreen!30}{\}}\textcolor{
+						DarkGreen!30}{[}\textcolor{black!30}{options}\textcolor{DarkGreen!30}{]} 
+			
+					\hspace{10mm} ... 
+
+					\hspace{5mm} \textcolor{blue!30}{\textbackslash end}\textcolor{DarkGreen!30}{\{}\textcolor{black!30}{environment2}\textcolor{
+						DarkGreen!30}{\}}
+						
+					\textcolor{blue}{\textbackslash end}\textcolor{DarkGreen}{\{}environment1\textcolor{DarkGreen}{\}}
+
+				\end{mdframed}				
+			\end{minipage}		
+			
+		\begin{flushleft} 
+			
+			Important environments							
 												
 		\end{flushleft} 
 		
