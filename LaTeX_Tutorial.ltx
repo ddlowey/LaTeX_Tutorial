@@ -554,9 +554,10 @@
 			
 			Quotation marks are prone to displaying errors, depending on the editor that is used. 
 			
-			One of the safest ways to include quotation marks in a text is via the \textit{\textbackslash enquote\{\}} function from the \foreignlanguage{english}{
-			\enquote*{csquotes}} package, 
-			which can be conjoined with the \foreignlanguage{english}{\enquote*{babel}} package to allow for language appropriate quotations.
+			One of the safest ways to include quotation marks in a text is via the \textit{\textbackslash enquote\{\}} function from the 
+			\foreignlanguage{english}{\enquote*{csquotes}} package, 
+			which can be conjoined with the \textit{\textbackslash foreignlanguage\{\}} function from the \foreignlanguage{english}{\enquote*{babel}} package to 
+			allow for language appropriate quotations.
 			Both packages need to be loaded in via the \textit{\textbackslash usepackage\{\}} command (see XXX) in the preamble and can be
 			modified with optional arguments such as the desired languages for the \foreignlanguage{english}{\enquote*{babel}} package and 
 			different styles for the \foreignlanguage{english}{\enquote*{csquotes}} package (for example, \foreignlanguage{english}{\enquote*{autostyle}} 
@@ -576,6 +577,18 @@
 
 				\begin{tcolorbox}[title=Code, colframe=blue!20, sharp corners, colback=white]
 				
+					\textcolor{red!40}{\% Load packages in preamble} 
+					
+						\bigskip
+					
+					\textcolor{blue!40}{\textbackslash usepackage}\textcolor{DarkGreen!40}{[}\textcolor{black!40}{english, french, german}\textcolor{
+						DarkGreen!40}{]}\textcolor{DarkGreen!40}{\{}\textcolor{black!40}{babel}\textcolor{DarkGreen!40}{\}} 
+
+					\textcolor{blue!40}{\textbackslash usepackage}\textcolor{DarkGreen!40}{[}\textcolor{black!40}{autostyle}\textcolor{
+						DarkGreen!40}{]}\textcolor{DarkGreen!40}{\{}\textcolor{black!40}{csquotes}\textcolor{DarkGreen!40}{\}} 
+					
+						\bigskip
+				
 					\textcolor{blue}{\textbackslash foreignlanguage}\textcolor{DarkGreen}{\{}english\textcolor{DarkGreen}{\}\{}\textcolor{
 						blue}{\textbackslash enquote}\textcolor{DarkGreen}{\{}Do or do not. There is no try.\textcolor{DarkGreen}{\}\}} 
 						\textcolor{blue}{\textbackslash bigskip} \bigskip
@@ -585,8 +598,11 @@
 						\textcolor{blue}{\textbackslash bigskip} \bigskip
 
 					\textcolor{blue}{\textbackslash foreignlanguage}\textcolor{DarkGreen}{\{}german\textcolor{DarkGreen}{\}\{}\textcolor{
-						blue}{\textbackslash enquote}\textcolor{DarkGreen}{\{}Do or do not. There is no try.\textcolor{DarkGreen}{\}\}} 
+						blue}{\textbackslash enquote}\textcolor{DarkGreen}{\{}Do or do not. There is no try.\textcolor{DarkGreen}{\}\}}  \bigskip
 											
+					\textcolor{blue}{\textbackslash enquote}\textcolor{DarkGreen}{\{}Yoda, \textcolor{blue}{\textbackslash enquote}\textcolor{
+						DarkGreen}{\{}Darth Vader\textcolor{DarkGreen}{\}} and Luke\textcolor{DarkGreen}{\}} 
+						
 				\end{tcolorbox} 
 
 				\begin{tcolorbox}[title=Output, colframe=blue!20, sharp corners, colback=white]
@@ -595,8 +611,10 @@
 					
 					\foreignlanguage{english}{\enquote*{Do or do not. There is no try.}} \bigskip
 
-					\foreignlanguage{german}{\enquote{Tu es oder tu es nicht. Es gibt kein Versuchen.}} 
-																		
+					\foreignlanguage{german}{\enquote{Tu es oder tu es nicht. Es gibt kein Versuchen.}} \bigskip
+					
+					\enquote{Yoda, \enquote{Darth Vader} and Luke}
+
 				\end{tcolorbox} 
 			
 			\bigskip
