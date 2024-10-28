@@ -557,7 +557,7 @@
 			One of the safest ways to include quotation marks in a text is via the \textit{\textbackslash enquote\{\}} function from the 
 			\foreignlanguage{english}{\enquote*{csquotes}} package, 
 			which can be conjoined with the \textit{\textbackslash foreignlanguage\{\}} function from the \foreignlanguage{english}{\enquote*{babel}} package to 
-			allow for language appropriate quotations.
+			allow for language appropriate quotation.
 			Both packages need to be loaded in via the \textit{\textbackslash usepackage\{\}} command (see XXX) in the preamble and can be
 			modified with optional arguments such as the desired languages for the \foreignlanguage{english}{\enquote*{babel}} package and 
 			different styles for the \foreignlanguage{english}{\enquote*{csquotes}} package (for example, \foreignlanguage{english}{\enquote*{autostyle}} 
@@ -733,12 +733,39 @@
 					\end{itemize}					
 
 			\end{itemize}	
-			
-									
 												
 		\end{flushleft} 
-		
 
+		%======== %
+		% Packages %
+		%======== %
+
+		\begin{flushleft} 
+
+			\textbf{4. Packages} \bigskip
+			
+			Packages are macros that supplement the base functionality of \LaTeX{} by adding on
+			new functions or features. 
+			To use packages they first need to be loaded in, which can be done by including them in the 
+			preamble via the \textit{\textbackslash usepackage\{\}} directive. 
+			Once a package is loaded in any function from that package may be called upon 
+			(e.g. the \textit{\textbackslash enquote\{\}} function from the \foreignlanguage{english}{\enquote*{csquotes}} package).
+			Common packages include:
+			
+			\begin{itemize}
+			
+				\item rerunfilecheck (…)
+				\item fontspec (…)
+				\item babel (…)
+				\item hyperref (…)
+				\item bookmark (…)
+				\item ams (…)
+				\item tikz (…)
+				\item microtype (…)
+			
+			\end{itemize}						
+
+		\end{flushleft} 			
 
 %					\begin{center}
 					
