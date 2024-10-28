@@ -476,13 +476,13 @@
 			
 		\end{flushleft} 
 		
-			%-------------------------------------------------%
-			% Comments and Special Characters  %
-			%-------------------------------------------------%			
+			%----------------------------------------------------------------%
+			% Comments, Special Characters and Quotation  %
+			%----------------------------------------------------------------%			
 
 		\begin{flushleft} 
 		
-			\textbf{3.4 Comments and Special Characters} \bigskip			
+			\textbf{3.4 Comments, Special Characters and Quotation} \bigskip			
 
 			Comments in programming are explanations or annotations in the source code that intend to make the code easier for human readers to
 			understand and that are usually ignored by the compiler or interpreter (and hence not executed). 
@@ -546,8 +546,67 @@
 					\textbackslash \_ & \_ & & \\
 					\textcolor{lightgray}{...} & \textcolor{lightgray}{...} & & \\
 				\hline				
-			\end{tabular}	
+			\end{tabular}
+			
+			\bigskip
+			
+			% Quotation 
+			
+			Quotation marks are prone to displaying errors, depending on the editor that is used. 
+			
+			One of the safest ways to include quotation marks in a text is via the \textit{\textbackslash enquote\{\}} function from the \foreignlanguage{english}{
+			\enquote*{csquotes}} package, 
+			which can be conjoined with the \foreignlanguage{english}{\enquote*{babel}} package to allow for language appropriate quotations.
+			Both packages need to be loaded in via the \textit{\textbackslash usepackage\{\}} command (see XXX) in the preamble and can be
+			modified with optional arguments such as the desired languages for the \foreignlanguage{english}{\enquote*{babel}} package and 
+			different styles for the \foreignlanguage{english}{\enquote*{csquotes}} package (for example, \foreignlanguage{english}{\enquote*{autostyle}} 
+			continuously adapts the quote style to the current document language).
+			
+			\bigskip
 
+			The standard command \textit{\textbackslash enquote\{\}} inserts double quotation marks, but can be modified with an asterisk to
+			switch to single quotation marks (i.e. \textit{\textbackslash enquote*\{\}}). 
+			Finally, quotes may be nested with \textit{\textbackslash enquote\{\textbackslash enquote\{\}\}} to achieve quotation within quotation.	
+
+			\bigskip
+
+		\end{flushleft}
+					
+			% Example for quotation marks 
+
+				\begin{tcolorbox}[title=Code, colframe=blue!20, sharp corners, colback=white]
+				
+					\textcolor{blue}{\textbackslash foreignlanguage}\textcolor{DarkGreen}{\{}english\textcolor{DarkGreen}{\}\{}\textcolor{
+						blue}{\textbackslash enquote}\textcolor{DarkGreen}{\{}Do or do not. There is no try.\textcolor{DarkGreen}{\}\}} 
+						\textcolor{blue}{\textbackslash bigskip} \bigskip
+						
+					\textcolor{blue}{\textbackslash foreignlanguage}\textcolor{DarkGreen}{\{}english\textcolor{DarkGreen}{\}\{}\textcolor{
+						blue}{\textbackslash enquote}*\textcolor{DarkGreen}{\{}Do or do not. There is no try.\textcolor{DarkGreen}{\}\}} 
+						\textcolor{blue}{\textbackslash bigskip} \bigskip
+
+					\textcolor{blue}{\textbackslash foreignlanguage}\textcolor{DarkGreen}{\{}german\textcolor{DarkGreen}{\}\{}\textcolor{
+						blue}{\textbackslash enquote}\textcolor{DarkGreen}{\{}Do or do not. There is no try.\textcolor{DarkGreen}{\}\}} 
+											
+				\end{tcolorbox} 
+
+				\begin{tcolorbox}[title=Output, colframe=blue!20, sharp corners, colback=white]
+				
+					\foreignlanguage{english}{\enquote{Do or do not. There is no try.}} \bigskip
+					
+					\foreignlanguage{english}{\enquote*{Do or do not. There is no try.}} \bigskip
+
+					\foreignlanguage{german}{\enquote{Tu es oder tu es nicht. Es gibt kein Versuchen.}} 
+																		
+				\end{tcolorbox} 
+			
+			\bigskip
+
+			%---------------------%
+			% Environments  %
+			%---------------------%			
+
+		\begin{flushleft}
+			
 			\textbf{3.5 Environments} \bigskip			
 
 			In \LaTeX{} environments are macros that can be used to apply specific formats to a section of the document, 
