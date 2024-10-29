@@ -2,9 +2,9 @@
 % Preamble %
 %#########%
 
-\documentclass[paper=a4]{scrartcl}
+% Set document class and load in packages
 
-% Load in packages
+\documentclass[paper=a4]{scrartcl}
 
 \usepackage[aux]{rerunfilecheck}
 \usepackage{fontspec}
@@ -23,16 +23,15 @@
 \usepackage{tcolorbox}
 \usepackage{multirow}
 
-%\usepackage{tabto}
-
-\setmainfont{Helvetica Neue}
-
 %#####%
 % Body %
 %#####%
 
-\begin{document}
+% Set main font and initiate document
 
+\setmainfont{Helvetica Neue}
+
+\begin{document}
 
 		%======================%
 		% Title and opening passage %
@@ -103,7 +102,6 @@
 				\end{mdframed}			
 			\end{minipage}
 			\begin{minipage}{0.1\textwidth}
-				%\begin{mdframed}[linecolor=white, backgroundcolor=white] 
 						
 					\[
 						\begin{drcases*}
@@ -119,42 +117,16 @@
 							\textcolor{white}{...} 					
 							\end{drcases*}
 							body 
-					\]								
-				%\end{mdframed}			
-			\end{minipage}			
-
-
-%			\begin{minipage}{0.5\textwidth}
-%				\begin{mdframed}[userdefinedwidth=7cm, backgroundcolor=black!7] 
-			
-%					\textbackslash documentclass[options]\{class\} 
-			
-%					\noindent \hspace{5mm} ... \bigskip{}
-			
-%					\noindent \textbackslash begin\{document\} 
-			
-%					\noindent \hspace{5mm} ... \bigskip{}
-			
-%					\noindent \textbackslash end\{document\}
-			
-%				\end{mdframed}			
-%			\end{minipage}
-%			\begin{minipage}{0.4\textwidth}
-%				\begin{mdframed}[userdefinedwidth=6.5cm, linecolor=white, backgroundcolor=white] 
-						
-%					[preamble] \bigskip{} \bigskip{}
-					
-%					[body] \bigskip{} \bigskip{} \bigskip{}			
-								
-%				\end{mdframed}						
-%			\end{minipage}						
+					\]	
+												
+			\end{minipage}								
 
 		\bigskip{}
 
 		\begingroup
 			\fontsize{9pt}{11pt}\selectfont
 
-				Ex. 1) \bigskip{}
+				Ex.) \bigskip{}
 
 				\textcolor{blue}{\textbackslash documentclass}\textcolor{DarkGreen}{\{}minimal\textcolor{DarkGreen}{\}} 
 				
@@ -206,7 +178,7 @@
 		\begingroup
 			\fontsize{9pt}{11pt}\selectfont
 
-				Ex. 1) \bigskip
+				Ex.) \bigskip
 
 				\textit{\textbackslash LaTeX\{\}} \hspace{10mm} – \hspace{5mm} displays the \foreignlanguage{english}{\enquote{LaTeX}} symbol (\LaTeX)
 
@@ -736,6 +708,25 @@
 												
 		\end{flushleft} 
 
+			%------------------%
+			% 3.6 Nesting  %
+			%------------------%			
+
+		\begin{flushleft}
+			
+			\textbf{3.6 Nesting} \bigskip			
+
+			Sometimes it is desirable to apply several commands to an object at once 
+			(for example, when combining bold font with italics).
+			In \LaTeX{} this can simply be achieved by \foreignlanguage{english}{\enquote*{nesting}} 
+			(or \foreignlanguage{english}{\enquote*{stacking}}) commands:
+			
+			\bigskip
+			
+			\colorbox{yellow}{\textit{\textbackslash command1\{\textbackslash command2\{…\}\}}} \bigskip
+
+		\end{flushleft}
+		
 		%======== %
 		% Packages %
 		%======== %
@@ -748,9 +739,9 @@
 			new functions or features. 
 			To use packages they first need to be loaded in, which can be done by including them in the 
 			preamble via the \textit{\textbackslash usepackage\{\}} directive. 
-			Once a package is loaded in any function from that package may be called upon 
+			Once a package is loaded in, any function from that package may be called upon 
 			(e.g. the \textit{\textbackslash enquote\{\}} function from the \foreignlanguage{english}{\enquote*{csquotes}} package).
-			Common packages include:
+			Some examples of common packages are:
 			
 			\begin{itemize}
 			
@@ -763,10 +754,28 @@
 				\item tikz (…)
 				\item microtype (…)
 			
-			\end{itemize}						
+			\end{itemize}
+			
+			Packages can get very extensive as they
 
 		\end{flushleft} 			
 
+			\colorbox{yellow}{texdoc <package>} \bigskip
+
+		%===== %
+		% Font %
+		%===== %
+
+		%\begin{flushleft} 
+
+		%	\textbf{5. Dummy title} \bigskip			
+
+		%	Dummy text					
+
+		%\end{flushleft} 		
+		
+		
+		
 %					\begin{center}
 					
 %						You've failed, your highness.
