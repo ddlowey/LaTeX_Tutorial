@@ -8,7 +8,7 @@
 
 \usepackage[aux]{rerunfilecheck}
 \usepackage{fontspec}
-\usepackage[english, japanese, ngerman]{babel}
+\usepackage[ngerman, english]{babel}
 \usepackage[autostyle]{csquotes}
 \usepackage[unicode]{hyperref}
 \usepackage{bookmark}
@@ -494,7 +494,8 @@
 			% Table special characters
 			
 			\begin{tabular}{
-				| p{3cm} | p{3cm} | p{3cm} | p{3cm} |}
+				| p{3cm} | p{3cm} | p{3cm} | p{3cm} |
+				}
 				\hline
 				\rowcolor{red!30}
 					\multicolumn{4}{| c |}{\textbf{Special Characters}} \\
@@ -504,9 +505,9 @@
 				\hline
 					\rowcolor{red!10}
 						\multicolumn{1}{| c |}{\textbf{Command}} & 
-						\multicolumn{1}{| c |}{\textbf{Character}} & 
-						\multicolumn{1}{| c |}{\textbf{Command}} & 
-						\multicolumn{1}{| c |}{\textbf{Character}} \\
+						\multicolumn{1}{ c |}{\textbf{Character}} & 
+						\multicolumn{1}{ c |}{\textbf{Command}} & 
+						\multicolumn{1}{ c |}{\textbf{Character}} \\
 				%\textbf{Command} & \textbf{Character} & \textbf{Command} & \textbf{Character} \\
 				\hline
 					\textbackslash \# & \# & \textbackslash textbackslash & \textbackslash \\
@@ -741,22 +742,66 @@
 			preamble via the \textit{\textbackslash usepackage\{\}} directive. 
 			Once a package is loaded in, any function from that package may be called upon 
 			(e.g. the \textit{\textbackslash enquote\{\}} function from the \foreignlanguage{english}{\enquote*{csquotes}} package).
-			Some examples of common packages are:
+			While the order in which packages are listed in the preamble is generally free, it may matter depending on
+			package dependencies (especially for language-related packages).
+			Below is a list of some common packages:
+
+			\bigskip			
+
+			% Table packages
+
+			\begin{tabular}{
+				| p{3cm} | p{5cm} | p{5cm} | 
+				}
+				\hline
+				\rowcolor{green!20}
+					\multicolumn{3}{| c |}{\textbf{Useful packages}} \\
+				\hline
+					\rowcolor{green!7.5}
+						\multicolumn{1}{| c |}{\textbf{Package}} & 
+						\multicolumn{1}{ c |}{\textbf{Function}} & 
+						\multicolumn{1}{ c |}{\textbf{Additional Information}} \\
+				\hline
+					rerunfilecheck & 
+					provides additional rerun warnings if auxiliary files have changed &
+					files to be checked can be passed on as optional arguments;
+					\textit{[aux]} turns on checking for all auxiliary files \\
+				\hline
+					fontspec & 
+					for extensive font settings and customisation &
+					\\
+				\hline				
+					babel & 
+					enables multilanguage support for document and ensures typographical accuracy for a variety of languages 
+					(e.g. quotation marks, dates) &
+					languages to be used in the document can be passed on as optional arguments via \textit{[ ]}; 
+					the last language listed is the main language of the document \\
+				\hline				
+					hyperref & 
+					useful for creating PDFs and cross-references (e.g. hyperlinks, bookmarks, page numbers) &
+					\textit{[unicode]} may be passed on to keep the pdf string in unicode encoding \\
+				\hline				
+					amsmath & 
+					provides extensive options for displaying and customising mathematical equations &
+					\\
+				\hline				
+					tikz & 
+					for creating simpler and more complex graphical elements (e.g. lines, dots, geometric shapes, paths) in \LaTeX{} &
+					\\
+				\hline				
+					microtype & 
+					enhances general appearance of document (e.g. protrusion, interword spacing, kerning) &
+					\\
+				\hline				
+			\end{tabular}
 			
-			\begin{itemize}
+			\bigskip
 			
-				\item rerunfilecheck (…)
-				\item fontspec (…)
-				\item babel (…)
-				\item hyperref (…)
-				\item bookmark (…)
-				\item ams (…)
-				\item tikz (…)
-				\item microtype (…)
-			
-			\end{itemize}
-			
-			Packages can get very extensive as they
+			Not only are there countless packages to choose from in \LaTeX{}, 
+			but individual packages can get quite extensive on their own, 
+			as they usually offer a great array of different options and settings.
+			It is nearly impossible to keep track of all the different .
+			Luckily, most \LaTeX{} packages are well-documented and offer a source. 
 
 		\end{flushleft} 			
 
